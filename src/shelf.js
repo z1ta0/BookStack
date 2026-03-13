@@ -130,4 +130,13 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    const detailsOverlay = document.getElementById('details-modal-overlay');
+    if (detailsOverlay && detailsOverlay.classList.contains('active')) {
+      closeDetailsModal();
+    }
+  });
 });

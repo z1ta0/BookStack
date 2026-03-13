@@ -21,12 +21,14 @@ const translations = {
     // Empty state
     emptyTitle: 'Your shelf is waiting',
     emptySubtitle: 'Tap + to search and add your first book',
+    emptyCta: 'Add your first book',
     
     // Modal
     modalTitle: 'Add a Book',
     detailsModalTitle: 'Book Details',
     searchPlaceholder: 'Search by title or ISBN…',
     searching: 'Searching…',
+    searchHint: 'Type at least 2 characters to search',
     noResults: 'No books found. Try a different search.',
     pages: '{count} pages',
     pagesUnknown: 'Pages unknown',
@@ -60,12 +62,14 @@ const translations = {
     // Empty state
     emptyTitle: '书架正等着你',
     emptySubtitle: '点击 + 搜索并添加你的第一本书',
+    emptyCta: '添加第一本书',
     
     // Modal
     modalTitle: '添加书籍',
     detailsModalTitle: '书籍详情',
     searchPlaceholder: '输入书名或ISBN搜索…',
     searching: '搜索中…',
+    searchHint: '至少输入 2 个字符开始搜索',
     noResults: '没有找到相关书籍，请尝试其他关键词。',
     pages: '{count} 页',
     pagesUnknown: '页数未知',

@@ -19,7 +19,7 @@ export function openModal() {
   input.placeholder = t('searchPlaceholder');
 
   overlay.style.display = 'flex';
-  results.innerHTML = '';
+  results.innerHTML = `<div class="search-hint">${t('searchHint')}</div>`;
   input.value = '';
 
   // Animate in
@@ -62,11 +62,16 @@ export function initModal() {
     const query = input.value.trim();
 
     if (query.length < 2) {
-      document.getElementById('search-results').innerHTML = '';
+      document.getElementById('search-results').innerHTML = `
+        <div class="search-hint">${t('searchHint')}</div>
+      `;
       return;
     }
 
     document.getElementById('search-spinner').style.display = 'block';
+    document.getElementById('search-results').innerHTML = `
+      <div class="search-hint">${t('searching')}</div>
+    `;
 
     debounceTimer = setTimeout(async () => {
       try {

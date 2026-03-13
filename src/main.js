@@ -8,6 +8,10 @@ function updateAllText() {
   const detailsTitle = document.getElementById('details-modal-title');
   if (detailsTitle) detailsTitle.textContent = t('detailsModalTitle');
 
+  // Empty state CTA
+  const emptyCta = document.getElementById('empty-cta');
+  if (emptyCta) emptyCta.textContent = t('emptyCta');
+
   // Re-render shelf (updates empty state, stats, etc.)
   renderShelf();
 }
@@ -25,6 +29,10 @@ function init() {
 
   // FAB button
   document.getElementById('add-book-fab').addEventListener('click', openModal);
+
+  // Empty state CTA
+  const emptyCta = document.getElementById('empty-cta');
+  if (emptyCta) emptyCta.addEventListener('click', openModal);
 
   // Init modal
   initModal();

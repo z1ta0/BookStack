@@ -977,9 +977,65 @@ body::after {
   font-size: 0.9rem;
 }
 
+.search-hint,
+.search-error {
+  text-align: center;
+  padding: 20px 16px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.empty-cta-btn {
+  margin-top: 10px;
+  padding: 10px 18px;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--accent);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.empty-cta-btn:hover {
+  background: var(--accent);
+  color: white;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--accent-soft);
+  outline-offset: 2px;
+}
+
 /* ============================================
    RESPONSIVE
    ============================================ */
+@media (max-width: 960px) {
+  #main-content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .left-panel {
+    width: 100%;
+    position: static;
+    height: auto;
+    padding-bottom: 0;
+  }
+
+  .right-panel {
+    padding: 24px 24px 80px;
+    justify-content: flex-start;
+  }
+
+  #height-stats {
+    margin: 20px 24px 0;
+  }
+}
+
 @media (max-width: 640px) {
   #app-header {
     padding: 16px 20px;
